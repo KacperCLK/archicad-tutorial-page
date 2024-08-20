@@ -1,0 +1,71 @@
+.coord-changer {
+    display: grid;
+    grid-template-columns: 65rem 1fr;
+    margin: 0 10rem;
+
+    &__calculations {
+        display: grid;
+        grid-template-rows: 10% 20% 1fr;
+        overflow: auto;
+
+        margin: 4rem 8rem 0 0;
+
+        &__title {
+            display: flex;
+            justify-content: center;
+        }
+
+        &__customersCoords {
+            display: grid;
+            grid-template-rows: 30% 20% 30%;
+            gap: 10%;
+
+            font-size: $font-size-xs;
+        }
+
+        &__description {
+            display: flex;
+            align-items: center;
+            text-align: center;
+
+            font-weight: 300;
+        }
+
+        &__coord-field{
+            display: flex;
+            justify-content: space-between;
+
+            input{
+                width: 40%;
+            }
+        }
+    }
+
+    &__explanations{
+        height: 100%;
+        overflow-y: auto;
+        padding-left: 8rem;
+        overflow: auto;
+
+        margin: 4rem 8rem 0 0;
+        font-size: $font-size-xs;
+
+        &__description{
+            display: flex;
+            flex-direction: column;
+            margin-left: 1rem;
+            gap: 0.5rem;
+
+            font-weight: 300;
+            text-align: justify;
+        }
+
+        &__sample-coords{
+            display: inline;
+            
+            span{
+                margin-left: 1rem;
+            }
+        }
+    }
+}

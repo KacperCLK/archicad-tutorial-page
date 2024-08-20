@@ -1,0 +1,43 @@
+.accordion-sidebar {
+    color: $color-white;
+    padding-left: 1rem;
+    padding-top: 2rem;
+    overflow-y: auto;
+
+    &__contentBx{
+        height: auto;
+        overflow: auto;
+    }
+
+    &__label,
+    &__content {
+        position: relative;
+        cursor: pointer;
+
+        p {
+            &:hover {
+                color: $color-main-gold-dark;
+            }
+        }
+    }
+
+    &__label {
+        font-size: $font-size-s;
+        padding-top: 0.7rem;
+    }
+
+    &__content {
+        height: 0;
+        margin-left: 1rem;
+        padding-top: 0.5rem;
+
+        overflow: hidden;
+        font-size: $font-size-xs;
+
+        transition: all 0.5s ease-out;
+
+        p {
+            padding-top: 0.2rem;
+        }
+    }
+}

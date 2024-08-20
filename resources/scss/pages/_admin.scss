@@ -1,0 +1,22 @@
+.admin{
+    margin: 0 auto;
+    width: 60rem;
+    font-size: $font-size-xs;
+
+    &__submit-button{
+        width: 100%;
+        padding: 1rem 0;
+        margin-bottom: 2rem;
+
+        color: $color-white;
+        font-size: $font-size-s;
+        font-weight: 600;
+        background-color: $color-main-blue;
+        border: none;
+
+        transition: color .3s ease;
+        &:hover{
+            color: $color-main-gold;
+        }
+    }
+}

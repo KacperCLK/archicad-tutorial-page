@@ -1,0 +1,42 @@
+.link{
+    display: flex;
+    color: inherit;
+    transition: color 0.3s ease;
+
+    &:hover{
+        color: $color-main-gold-dark;
+    }
+    
+    &--active{
+        color: $color-main-gold-dark;
+    }
+
+    &--underline{
+        p{
+            position: relative;
+    
+            &::after{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                
+                width: 0;
+                height: 1px;
+                
+                background-color: $color-main-gold-dark;
+                transition: width 0.3s ease;
+            }
+    
+            &:hover::after {
+                width: 100%;
+            }
+        }
+    }
+
+    &--inline{
+        display: inline;
+    }
+}
+

@@ -1,0 +1,35 @@
+// Import styles for layout components
+@import '/resources/scss/layout/layouts-components/header';
+@import '/resources/scss/layout/layouts-components/footer';
+@import '/resources/scss/layout/layouts-components/sidebar';
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: 10vh 80vh 10vh;
+    grid-template-areas:
+        "sidebar header"
+        "sidebar content"
+        "sidebar footer";
+
+    height: 100vh;
+
+    .header {
+        grid-area: header;
+    }
+
+    .sidebar {
+        grid-area: sidebar;
+    }
+
+    .content {
+        grid-area: content;
+        height: 80vh;
+    overflow: auto;
+
+    }
+
+    .footer {
+        grid-area: footer;
+    }
+}

@@ -1,0 +1,97 @@
+.accordion-coord-changer {
+    width: 100%;
+    margin-top: 2rem;
+    font-size: $font-size-xs;
+    overflow-y: auto;
+
+    &__contentBx {
+        position: relative;
+        overflow: hidden;
+        margin: 1rem 0;
+
+        &.active {
+            > :first-child {
+                &::before {
+                    content: "\25B2";
+                }
+            }
+
+            > :nth-child(2) {
+                height: 5rem;
+                padding: 1rem;
+                opacity: 1;
+            }
+        }
+    }
+
+    &__label {
+        position: relative;
+        padding: 1rem;
+
+        display: grid;
+        grid-template-columns: 50% 40%;
+
+        background-color: $color-blue;
+        color: $color-white;
+
+        cursor: pointer;
+
+        transition: color .3s ease;
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            right: 2rem;
+
+            content: "\25BC";
+            font-size: $font-size-xs;
+
+            transform: translate(0, -50%);
+        }
+
+        &:hover {
+            color: $color-main-gold-dark;
+        }
+    }
+
+    &__content {
+        position: relative;
+        display: grid;
+        grid-template-columns: 42.5% 5% 42.5% 5% 5%;
+
+        padding: 0 1rem;
+        height: 0;
+
+        opacity: 0;
+
+        background-color: $color-white;
+        font-size: $font-size-xs;
+        transition: 0.5s;
+
+
+        &__lat,
+        &__lon,
+        &__change-unit,
+        &__copy {
+            align-self: center;
+            display: flex;
+        }
+
+        &__change-unit,
+        &__copy {
+
+            &:hover {
+                color: $color-grey;
+            }
+        }
+
+        &__change-unit {
+            justify-self: center;
+        }
+
+        &__lat-result,
+        &__lon-result {
+            margin-left: 1rem;
+        }
+    }
+}

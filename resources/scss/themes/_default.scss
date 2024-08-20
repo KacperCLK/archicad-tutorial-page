@@ -1,0 +1,11 @@
+.day{
+    &--section-content{
+        background-color: $color-bright-theme;
+    }
+}
+
+.night{
+    &--section-content{
+        background-color: $color-dark-theme;
+    }
+}

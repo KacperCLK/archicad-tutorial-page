@@ -1,0 +1,25 @@
+.admin-page {
+    display: grid;
+    // grid-template-columns: 1fr 6fr;
+    grid-template-rows: 10vh 80vh 10vh;
+    grid-template-areas:
+        "header header"
+        "content content"
+        "footer footer";
+
+    height: 100vh;
+
+    .header {
+        grid-area: header;
+    }
+
+    .content {
+        grid-area: content;
+        height: 80vh;
+        overflow: auto;
+    }
+
+    .footer {
+        grid-area: footer;
+    }
+}

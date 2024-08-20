@@ -1,0 +1,27 @@
+.input {
+    border: none;
+    padding: 1rem;
+    font-size: inherit;
+
+    &--1{
+        border-bottom: 1px solid $color-main-very-light ;
+        color: $color-grey;
+        
+        &:focus{
+            outline: none;
+            border-bottom: 2px solid $color-main-light;
+            color: $color-black;
+        }
+    }
+
+    &--2{ // Message box - w zakładce Contact
+        border-bottom: 1px solid $color-blue-light;
+        color: $color-grey;
+        
+        &:focus{
+            outline: none;
+            border-bottom: 2px solid $color-blue;
+            color: $color-black;
+        }
+    } 
+}
