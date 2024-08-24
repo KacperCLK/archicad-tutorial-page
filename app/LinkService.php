@@ -13,7 +13,7 @@ class LinkService
             'home' => 'Home',
             'tutorials.index' => 'Tutorials',
             'coord-changer' => 'Coord Changer',
-            'about' => 'About',
+            // 'about' => 'About',
             'contact' => 'Contact',
         ];
 
