@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <!-- Styles -->
-    @vite(['resources/css/main.css', 'resources/scss/main.scss', 'resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/scss/app.scss', 'resources/js/app.js'])
+
 </head>
 <body>
     <div class="container">
