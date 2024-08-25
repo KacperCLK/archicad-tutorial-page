@@ -1,0 +1,52 @@
+.add-tutorial, .edit-tutorial {
+    position: relative;
+    display: none;
+    grid-template-rows: 10rem 0 1fr;
+    height: 100%;
+
+    &__form {
+        display: grid;
+        grid-template-rows: 7rem 7rem 14rem 20rem 4rem 4rem;
+        gap: 1rem;
+        padding-left: 2rem;
+
+        button {
+            height: 100%;
+            padding: 1rem;
+            width: 40%;
+        }
+    }
+
+    &__input-box, &__textarea-box, &__select-hints-box {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            font-weight: 500;
+        }
+
+        textarea, input {
+            height: 100%;
+        }
+    }
+
+    &__all-hints {
+        overflow-y: auto;
+    }
+
+    &__hint{
+        display: flex;
+        gap: 1rem;
+        padding-top: 1rem;
+        padding-left: 2rem;
+        align-items: center;
+        
+        label {
+            font-weight: 300;
+        }
+    }
+
+    &__select-chapter {
+        width: 40%;
+    }
+}

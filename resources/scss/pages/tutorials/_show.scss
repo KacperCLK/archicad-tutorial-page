@@ -41,6 +41,8 @@
     &__video-hints{
         grid-row: 2;
         grid-column: 4;
+        overflow-y: auto;
+        overflow-x: hidden;
     }
 
     &__hint{

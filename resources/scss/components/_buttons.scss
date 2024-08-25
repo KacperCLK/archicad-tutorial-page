@@ -28,4 +28,36 @@
             color: $color-black;
         }
     }
+
+    &--admin-form {
+        justify-self: center;
+        height: 100%;
+
+        color: $color-white;
+        background-color: $color-main-light;
+        
+        font-size: $font-size-s;
+        font-weight: 400;
+        
+        border-radius: 5px;
+    }
+
+    &--admin-page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        color: $color-white;
+        font-size: $font-size-s;
+        font-weight: 600;
+        
+        background-color: $color-main-blue;
+        border: none;
+        text-decoration: none;
+        
+        transition: color .3s ease;
+        &:hover{
+            color: $color-main-gold;
+        }
+    }
 }

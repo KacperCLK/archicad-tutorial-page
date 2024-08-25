@@ -1,22 +1,45 @@
 .admin{
-    margin: 0 auto;
-    width: 60rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    
     font-size: $font-size-xs;
-
-    &__submit-button{
-        width: 100%;
-        padding: 1rem 0;
-        margin-bottom: 2rem;
-
-        color: $color-white;
-        font-size: $font-size-s;
-        font-weight: 600;
-        background-color: $color-main-blue;
-        border: none;
-
-        transition: color .3s ease;
-        &:hover{
-            color: $color-main-gold;
+    
+    overflow: hidden;
+    
+    &__left, &__right {
+        height: 90vh;
+        padding: 5rem 10rem;
+    }
+    
+    &__right {
+        .active {
+            display: grid;
         }
     }
+
+    &__form {
+        display: grid;
+        grid-template-rows: 4.5rem 1fr;
+        gap: 1rem;
+        
+        height: 100%;
+        overflow: hidden;
+    }
+
+    &__buttons-box {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 2rem;
+
+        .button--admin-page {
+            width: 30%;
+        }
+    }
+
+    &__form-content {
+        padding: 0 1rem;
+        overflow: auto;
+    }
+
 }

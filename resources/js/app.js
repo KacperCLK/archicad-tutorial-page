@@ -1,6 +1,6 @@
 import './bootstrap';
 import './components/accordion-sidebar';
-import './components/draggableLists';
+import './components/admin-page/draggableLists';
 import CoordChangerApp from './coord-changer/CoordChangerApp';
 
 document.addEventListener('DOMContentLoaded', () => {

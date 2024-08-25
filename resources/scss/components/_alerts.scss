@@ -1,0 +1,36 @@
+.error-message {
+    &--admin-form {
+        position: absolute;
+        bottom: -20px;
+        color: $color-red-errors;
+    }
+}
+
+.alert {
+    &--success {
+        display: none;
+        position: absolute;
+
+        height: 4rem;
+        width: 100%;
+        top: -4rem;
+
+        margin: 0;
+        
+        align-items: center;
+        justify-content: center;
+        font-size: $font-size-s;
+
+        background-color: rgba($color: $color-green-aprove, $alpha: 0.2);
+
+        p {
+            margin: 0;
+            font-weight: 400;
+            color: $color-dark-green-aprove;
+        }
+    }
+
+    &--active {
+        display: flex;
+    }
+}

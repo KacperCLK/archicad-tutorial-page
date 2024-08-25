@@ -1,0 +1,28 @@
+.admin-header {
+    display: flex;
+    width: 100%;
+    padding: 0 10rem;
+    
+    justify-content: space-between;
+    align-items: center;
+    
+    color: white;
+    background-color: $color-main-light;
+    font-size: $font-size-s-m;
+    font-weight: 400;
+
+    &__right-side, &__left-side {
+        display: flex;
+        align-items: center;
+        gap: 4rem;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    &__logo {
+        width: 4.5rem;
+        height: 3.9rem;
+    }
+}

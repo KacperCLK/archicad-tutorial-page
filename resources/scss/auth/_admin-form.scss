@@ -27,17 +27,6 @@
         }
     }
 
-    &__title {
-        padding-bottom: 3rem;
-        margin-bottom: 3rem;
-        
-        color: $color-grey;
-        font-weight: 300;
-        font-size: $font-size-l;
-        
-        border-bottom: 1px solid $color-grey;
-    }
-
     &__form{
         display: flex;
         flex-direction: column;
@@ -47,71 +36,32 @@
         gap: 5%;
         
         font-size: $font-size-xs;
+
+        button {
+            margin-top: 1rem;
+            width: 70%;
+        }
     }
     
-    &__input {
+    &__input-box {
+        position: relative;
         display: grid;
         grid-template-rows: $font-size-s 1fr;
         gap: 0.5rem;
+        
         height: 100%;
         width: 100%;
         
         label, input {
             display: flex;
         }
-
-        input {
-            padding: 1rem;
-
-            background-color: $color-very-light-grey;
-            font-size: inherit;
-            border: none;
-            border-bottom: 2px solid $color-white;
-    
-            transition: all .3s ease;
-    
-            &:focus{
-                outline: none;
-                border-bottom: 2px solid $color-blue-light;
-            }
-        }
     }
 
     &__checkbox-remember{
+        margin-top: 1rem;
         display: flex;
         justify-content: center;
 
-        input {
-            position: relative;
-            width: 2rem;
-            height: 2rem;
-
-            appearance: none;
-            
-            border: 2px solid $color-blue-light; /* Kolor ramki */
-            border-radius: 4px;
-            outline: none;
-            cursor: pointer;
-            
-            transition: background-color 0.3s, border-color 0.3s;
-
-            &:checked {
-                background-color: $color-blue-light; /* Kolor tła, gdy zaznaczone */
-
-                &::after {
-                    content: '✓';
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    
-                    font-size: $font-size-xs;
-                    color: white;
-                    
-                    transform: translate(-50%, -50%);
-                }
-            }
-        }
-        
         label {
             margin-left: 1rem;
             font-size: 14px;
@@ -120,18 +70,4 @@
         }
     }
 
-    &__button {
-        justify-self: center;
-        width: 70%;
-        height: 100%;
-
-        color: $color-white;
-        background-color: $color-main-light;
-        
-        font-size: $font-size-s;
-        font-weight: 400;
-        
-        border-radius: 5px;
-        border: none;
-    }
 }

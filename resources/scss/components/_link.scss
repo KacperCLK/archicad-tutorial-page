@@ -2,6 +2,7 @@
     display: flex;
     color: inherit;
     transition: color 0.3s ease;
+    text-decoration: none;
 
     &:hover{
         color: $color-main-gold-dark;

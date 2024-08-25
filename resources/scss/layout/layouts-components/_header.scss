@@ -16,8 +16,17 @@
     }
 
     &__logo-container{
+        display: flex;
+        align-items: center;
         height: 100%;
         margin-left: 1rem;
+        
+        img {
+            width: 4.5rem;
+            height: 3.9rem;
+            object-fit: cover;
+            margin-right: 1rem;
+        }
     }
     
     &__logo{
@@ -25,12 +34,7 @@
         height: 100%;
         align-items: center;
         
-        font-weight: 300;
         font-size: $font-size-m;
-
-        span{
-            font-weight: 800;
-        }
     }
 
     &__navigation {

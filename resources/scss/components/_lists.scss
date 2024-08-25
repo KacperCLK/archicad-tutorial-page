@@ -1,51 +1,91 @@
-.rounded-list {
-    $size: $font-size-xs;
-    font-size: $size;
+.rounded-list, .rectangle-list {
     padding: 0;
-    margin-left: $size*2;
 
     &__box {
         display: flex;
         align-items: center;
         margin: 1rem;
-
-        &:hover .rounded-list__number {
-            background-color: $color-blue-dark-lists;
-        }
-        
-        &:hover .rounded-list__title {
-            background-color: $color-grey-dark-lists;
-        }
     }
 
     &__number {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
 
+    &__title {
+        position: relative;
+        display: flex;
+        
+        justify-content: space-between;
+        align-items: center;
+
+        flex-grow: 1;
+
+        transition: all .3s ease;
+    }
+
+    &__buttons-box {
+        display: flex;
+        height: 100%;
+        gap: 2rem;
+
+        .delete {
+            background-color: $color-dark-red-delete;
+            color: $color-white;
+            
+            &:hover {
+                background-color: $color-red-delete;
+            }
+        }
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        
+        height: 100%;
+        padding: 0 1rem;
+        
+        border: none;
+        text-decoration: none;
+        color: inherit;
+
+        transition: all .3s ease;
+    }
+}
+
+.rounded-list {
+    $size: $font-size-xs;
+    font-size: $size;
+    margin-left: $size*2;
+
+    &__box {
+        &:hover .rounded-list__number {
+            background-color: $color-dark-hover-lists;
+        }
+        
+        &:hover .rounded-list__title {
+            background-color: $color-grey-hover-lists;
+        }
+    }
+
+    &__number {
         height: $size*2.5;
         width: $size*2.5;
         margin-right: 1rem;
         z-index: 1;
 
-        background-color: $color-blue-lists;
+        background-color: $color-dark-lists;
         border-radius: 50%;
     }
 
     &__title {
-        position: relative;
-        justify-content: space-between;
-        display: flex;
-        align-items: center;
-
         height: $size*2.5;
-        flex-grow: 1;
         margin-left: -$size * 1.25 - 1rem;
         padding-left: $size*2.5;
-        z-index: 0;
 
         background-color: $color-grey-lists;
-        transition: all .3s ease;
 
         &::before {
             content: '';
@@ -59,16 +99,13 @@
         }
     }
 
-    &__btn {
-        background-color: $color-blue-lists;
-        height: 100%;
-        padding: 0 1rem;
-        border: none;
-
-        transition: all .3s ease;
-
-        &:hover {
-            background-color: $color-blue-dark-lists;
+    &__buttons-box {
+        .edit {
+            background-color: $color-dark-lists;
+            
+            &:hover {
+                background-color: $color-dark-hover-lists;
+            }
         }
     }
 }
@@ -76,50 +113,31 @@
 .rectangle-list {
     $size: $font-size-s;
     font-size: $size;
-    padding: 0;
-
-    &__box {
-        display: flex;
-        align-items: center;
-        margin: 1rem;
-    }
 
     &__number {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
         height: $size*2.5;
         width: $size*2.5;
         margin-right: 0.5rem;
 
-        background-color: $color-orange-lists;
+        color: $color-white;
+        background-color: $color-light-lists;
     }
 
     &__title {
-        position: relative;
-        justify-content: space-between;
-        display: flex;
-        align-items: center;
-        padding-left: $size;
-
         height: $size*2.5;
+        padding-left: $size;
         flex-grow: 1;
-
         background-color: $color-grey-lists;
-        transition: all .3s ease;
     }
 
-    &__btn {
-        background-color: $color-orange-lists;
-        height: 100%;
-        padding: 0 1rem;
-        border: none;
-
-        transition: all .3s ease;
-
-        &:hover {
-            background-color: $color-orange-dark-lists;
+    &__buttons-box {
+        .edit {
+            background-color: $color-light-lists;
+            color: $color-white;
+            
+            &:hover {
+                background-color: $color-light-hover-lists;
+            }
         }
     }
 }
