@@ -21,8 +21,8 @@
     @livewireStyles
 
     {{-- Styles --}}
+    @vite(['resources/css/app.css', 'resources/scss/app.scss', 'resources/js/app.js'])
     @livewireScripts
-    @vite(['resources/sass/app.scss', 'resources/scss/main.scss', 'resources/css/main.css', 'resources/js/app.js'])
 </head>
 <body>
     <div class="admin-page">
