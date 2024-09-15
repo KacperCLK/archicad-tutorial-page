@@ -2,17 +2,39 @@
     display: grid;
     grid-template-columns: 65rem 1fr;
     margin: 0 10rem;
+    height: 80vh;
+    overflow: hidden;
+    
+    @media only screen and (max-width: $bp-largest) {
+        margin: 0;
+    }
+    
+    @media only screen and (max-width: $bp-large) {
+        grid-template-columns: 1fr;
+        overflow: auto;
+    }
 
     &__calculations {
+        height: 80vh;
         display: grid;
         grid-template-rows: 10% 20% 1fr;
         overflow: auto;
-
-        margin: 4rem 8rem 0 0;
+        
+        margin: 4rem;
+        
+        @media only screen and (max-width: $bp-small) {
+            overflow: unset;
+            margin: 2rem;
+            grid-template-rows: 10% 30% 1fr;
+        }
 
         &__title {
             display: flex;
             justify-content: center;
+
+            @media only screen and (max-width: $bp-small) {
+                align-items: center;
+            }
         }
 
         &__customersCoords {
@@ -42,13 +64,21 @@
     }
 
     &__explanations{
-        height: 100%;
+        height: fit-content;
         overflow-y: auto;
         padding-left: 8rem;
-        overflow: auto;
 
-        margin: 4rem 8rem 0 0;
+        margin: 1rem;
+        padding: 2rem;
         font-size: $font-size-xs;
+
+        @media only screen and (max-width: $bp-small) {
+            margin-top: 8rem;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            margin-top: 2rem;
+        }
 
         &__description{
             display: flex;
@@ -58,6 +88,10 @@
 
             font-weight: 300;
             text-align: justify;
+
+            @media only screen and (max-width: $bp-smallest) {
+                font-size: $font-size-xxs;
+            }
         }
 
         &__sample-coords{

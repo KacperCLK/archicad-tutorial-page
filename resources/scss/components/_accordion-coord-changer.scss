@@ -4,6 +4,10 @@
     font-size: $font-size-xs;
     overflow-y: auto;
 
+    @media only screen and (max-width: $bp-small) {
+        overflow: unset;
+    }
+
     &__contentBx {
         position: relative;
         overflow: hidden;
@@ -20,6 +24,14 @@
                 height: 5rem;
                 padding: 1rem;
                 opacity: 1;
+                
+                @media only screen and (max-width: $bp-small) {
+                    height: 10rem;
+                }
+
+                @media only screen and (max-width: $bp-smallest) {
+                    height: 7.5rem;
+                }
             }
         }
     }
@@ -33,10 +45,15 @@
 
         background-color: $color-blue;
         color: $color-white;
-
+        
         cursor: pointer;
-
+        
         transition: color .3s ease;
+        
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: $font-size-xxs;
+            grid-template-columns: 60% 40%;
+        }
 
         &::before {
             position: absolute;
@@ -58,16 +75,23 @@
         position: relative;
         display: grid;
         grid-template-columns: 42.5% 5% 42.5% 5% 5%;
-
+        
         padding: 0 1rem;
         height: 0;
-
+        
         opacity: 0;
-
+        
         background-color: $color-white;
         font-size: $font-size-xs;
         transition: 0.5s;
+        
+        @media only screen and (max-width: $bp-small) {
+            grid-template-columns: 80% 10% 10%;
+        }
 
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: $font-size-xxs;
+        }
 
         &__lat,
         &__lon,
@@ -79,7 +103,6 @@
 
         &__change-unit,
         &__copy {
-
             &:hover {
                 color: $color-grey;
             }
@@ -87,6 +110,11 @@
 
         &__change-unit {
             justify-self: center;
+
+            @media only screen and (max-width: $bp-small) {
+                grid-row: 1;
+                grid-column: 3;
+            }
         }
 
         &__lat-result,

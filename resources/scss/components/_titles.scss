@@ -1,12 +1,24 @@
 .title{
     &--s{
         font-size: $font-size-s;
+
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: $font-size-xs;
+        }
     }
     
     &--m{
         text-transform: uppercase;
         font-size: $font-size-m;
         font-weight: 600;
+        
+        @media only screen and (max-width: $bp-small) {
+            font-size: $font-size-s-m;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: $font-size-s;
+        }
     }
 
     &--admin-form, &--admin-page {

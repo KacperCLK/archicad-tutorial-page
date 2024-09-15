@@ -1,4 +1,5 @@
 .sidebar {
+    position: relative;
     display: grid;
     grid-template-rows: 10vh 90vh;
     width: 100%;
@@ -8,13 +9,38 @@
     background-color: $color-main-dark;
     color: $color-white;
 
+    @media only screen and (max-width: $bp-medium-small) {
+        position: absolute;
+        pointer-events: none;
+        opacity: 0;
+        z-index: 10;
+        
+        width: 0rem;
+        transition: all 0.5s ease;
+        
+        &.active {
+            display: grid;
+            width: 20rem;
+            opacity: 1;
+            pointer-events: all;
+        }
+    }
+
     &__title {
         display: flex;
         align-items: center;
         height: 100%;
-
+        
         padding-left: 0.5rem;
 
+        text-transform: uppercase;
+        font-size: $font-size-m;
+        font-weight: 600;
         border-bottom: 1px solid $color-white;
+
+        @media only screen and (max-width: $bp-medium-small) {
+            font-size: $font-size-s;
+            padding-left: 5rem;
+        }
     }
 }

@@ -14,8 +14,9 @@ class Sidebar extends Component
     {
         $this->chapters = Chapter::select('id', 'number', 'name')
             ->with(['tutorials' => function ($query) {
-                $query->select('chapter_id', 'id', 'number', 'name');
+                $query->select('chapter_id', 'id', 'number', 'name')->orderBy('number', 'asc');
             }])
+            ->orderBy('number', 'asc')
             ->get();
     }
 

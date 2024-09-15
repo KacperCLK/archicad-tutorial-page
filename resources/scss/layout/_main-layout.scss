@@ -5,7 +5,7 @@
 
 .container{
     display: grid;
-    grid-template-columns: 1fr 6fr;
+    grid-template-columns: 20rem 1fr;
     grid-template-rows: 10vh 80vh 10vh;
     grid-template-areas:
         "sidebar header"
@@ -13,6 +13,14 @@
         "sidebar footer";
 
     height: 100vh;
+
+    @media only screen and (max-width: $bp-medium-small) {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "content"
+            "footer";
+    }
 
     .header {
         grid-area: header;
@@ -25,11 +33,87 @@
     .content {
         grid-area: content;
         height: 80vh;
-    overflow: auto;
-
+        overflow: hidden;
     }
 
     .footer {
         grid-area: footer;
+    }
+
+    
+    .sidebar-display {
+        display: none;    
+        position: absolute;
+        top: 3.2vh;
+        left: 1rem;
+
+        flex-direction: column;
+        justify-content: space-around;
+        
+        height: 3.5vh; // 3rem
+        cursor: pointer;
+        
+        @media only screen and (max-width: $bp-smallest) {
+            top: 3.5vh;
+            height: $font-size-s-m; // 3rem
+        } 
+
+        &:hover {
+            .sidebar-display__icon{
+                &--1,
+                &--2,
+                &--3 {
+                    background-color: $color-main-gold-dark;
+                }
+            }
+        }
+
+        &.active {
+            .sidebar-display__icon{
+                &--1  {
+                    transform: rotate(135deg);
+
+                    @media only screen and (max-width: $bp-medium-small) {
+                        transform: translateY(0.8rem) rotate(135deg);
+                    } 
+                }
+    
+                &--2 {
+                    transform: scale(0);
+                }
+                
+                &--3 {
+                    transform: rotate(-135deg);
+                    
+                    @media only screen and (max-width: $bp-medium-small) {
+                        transform: translateY(-0.8rem) rotate(-135deg);
+                    } 
+                }
+            }
+        }
+
+        &__icon{
+
+            &--1,
+            &--2,
+            &--3 {
+                width: 3rem;
+                height: 2px;
+                background-color: $color-white;
+                display: inline-block;
+                
+                transition: transform .5s ease, background-color .2s ease;
+
+                @media only screen and (max-width: $bp-smallest) {
+                    width: 2rem;
+                    height: 1px;
+                }  
+            }
+        }
+
+        @media only screen and (max-width: $bp-medium-small) {
+            display: flex;
+            z-index: 20;
+        }  
     }
 }

@@ -7,12 +7,30 @@
     align-self: center;
     justify-self: center;
     height: 46rem;
-    width: 46rem;
+    width: 85%;
 
     background-color: $color-white;
     font-size: $font-size-xs;
     border-radius: 15px;
     box-shadow: 0 0 10px rgba($color-black, 0.2);
+
+    @media only screen and (max-width: $bp-large) {
+        width: 55%;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        width: 70%;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        width: 90%;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        width: 100%;
+        box-shadow: none;
+        border-radius: none;
+    }
 
     &__title{
         font-size: $font-size-m;

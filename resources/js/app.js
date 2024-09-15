@@ -10,3 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
         new CoordChangerApp();
     }    
 });
+
+const toggleButton = document.getElementById('toggleButton');
+const sidebar = document.getElementById('sidebar');
+
+toggleButton.addEventListener('click', function() {    
+    toggleButton.classList.toggle('active');
+    sidebar.classList.toggle('active');
+});

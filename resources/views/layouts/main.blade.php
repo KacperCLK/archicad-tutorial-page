@@ -26,6 +26,12 @@
         </div>
 
         @include('layouts.layouts-components.footer')
+
+        <div id="toggleButton"  class="sidebar-display">
+            <div class="sidebar-display__icon--1">&nbsp;</div>
+            <div class="sidebar-display__icon--2">&nbsp;</div>
+            <div class="sidebar-display__icon--3">&nbsp;</div>
+        </div>
     </div>
 </body>
 </html>

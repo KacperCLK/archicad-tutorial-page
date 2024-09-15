@@ -4,10 +4,14 @@
     display: flex;
     height: 100%;
     width: 100%;
-    overflow: hidden;
+    overflow: auto;
     
     font-size: $font-size-xs;
     background-color: $color-main-blue;
+    
+    @media only screen and (max-width: $bp-large) {
+        background-color: $color-white;
+    }
 
     &__content {
         position: relative;
@@ -22,29 +26,57 @@
         padding: 10rem 0;
         margin-left: 10rem;
         z-index: 10;
-        
+
+        @media only screen and (max-width: $bp-largest) {
+            margin: 0 3rem;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            padding: 2rem 0;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            padding: 2rem;
+            margin: 0;
+            gap: 2rem;
+            overflow-y: auto;
+        }
+
         &::after {
             content: '';
             position: absolute;
             height: 200%;
             width: 210%;
-            left: -10rem;
             top: -70rem;
-            border-radius: 0 0 300rem 0;
+            left: -10rem;
+            border-radius: 0 0 500rem 0;
             
             z-index: -1;
             background-color: $color-white;
+
+            @media only screen and (max-width: $bp-largest) {
+                left: -30rem;
+            }
+
+            @media only screen and (max-width: $bp-large) {
+                display: none;
+            }
         }
     }
 
     &__main-title {
         font-weight: 400;
         font-size: $font-size-m;
+        
+        @media only screen and (max-width: $bp-small) {
+            font-size: $font-size-s-m;
+        }
     }
     
     &__subtitle {
         font-weight: 400;
         font-size: $font-size-s;
+        margin-top: .5rem;
     }
 
     &__hints {
@@ -65,15 +97,30 @@
 
     &__logo {
         position: absolute;
-        height: 29.25rem;
         width: 33.75rem;
         right: 10rem;
         bottom: 10rem;
+
+        @media only screen and (max-width: $bp-largest) {
+            width: 30rem;
+            right: 5rem;
+            bottom: 5rem;
+        }
+
+        @media only screen and (max-width: $bp-large) {
+            width: 20rem;
+            right: 2rem;
+            bottom: 2rem;
+        }
 
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+
+            @media only screen and (max-width: $bp-small) {
+                display: none;
+            }
         }
     }
 }
