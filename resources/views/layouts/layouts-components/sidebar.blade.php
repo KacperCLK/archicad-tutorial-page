@@ -1,7 +1,7 @@
 <div id="sidebar" class="sidebar">
-    <div class="sidebar__title">
+    {{-- <div class="sidebar__title">
         Tutorials
     </div>
 
-    <x-accordion-sidebar :chapters="$chapters"></x-accordion-sidebar>
+    <x-accordion-sidebar :chapters="$chapters"></x-accordion-sidebar> --}}
 </div>

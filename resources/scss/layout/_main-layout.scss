@@ -5,12 +5,18 @@
 
 .container{
     display: grid;
-    grid-template-columns: 20rem 1fr;
+    grid-template-columns: 1fr;
+    // grid-template-rows: 10vh 80vh 10vh;
+    // grid-template-areas:
+    //     "sidebar header"
+    //     "sidebar content"
+    //     "sidebar footer";
+
     grid-template-rows: 10vh 80vh 10vh;
-    grid-template-areas:
-        "sidebar header"
-        "sidebar content"
-        "sidebar footer";
+        grid-template-areas:
+            "header"
+            "content"
+            "footer";
 
     height: 100vh;
 
