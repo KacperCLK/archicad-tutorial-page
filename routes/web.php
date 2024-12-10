@@ -7,7 +7,8 @@ use App\Http\Controllers\HomeController;
 
 // Strona główna i przekierowanie
 Route::get('/', function () {
-    return redirect()->route('home');
+    // return redirect()->route('home');
+    return redirect()->route('coord-changer');
 });
 
 // Strony informacyjne
