@@ -6,9 +6,12 @@ import CoordChangerApp from './coord-changer/CoordChangerApp';
 document.addEventListener('DOMContentLoaded', () => {
     // Init accordion on coord-changer page
     const currentPath = window.location.pathname;
-    if (currentPath === '/pages/coord-changer') {  
+    // if (currentPath === '/pages/coord-changer') {  
+    //     new CoordChangerApp();
+    // }   
+    if (currentPath === '/coord-changer') {  
         new CoordChangerApp();
-    }    
+    }     
 });
 
 const toggleButton = document.getElementById('toggleButton');
