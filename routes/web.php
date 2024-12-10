@@ -12,7 +12,7 @@ Route::get('/', function () {
 });
 
 // Strony informacyjne
-Route::prefix('pages')->group(function () {
+Route::prefix('')->group(function () {
     Route::get('/home', [PageController::class, 'home'])->name('home');
     Route::get('/about', [PageController::class, 'about'])->name('about');
     Route::get('/contact', [PageController::class, 'contact'])->name('contact');
